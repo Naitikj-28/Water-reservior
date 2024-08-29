@@ -1,0 +1,130 @@
+/* .sidebar {
+  position: fixed;
+  top: 0;
+  left: -25%;
+  width: 15%;
+  height: 100%;
+  margin-top: 3%;
+  background-color: #444;
+  color: white;
+  padding: 2rem;
+  transition: left 0.3s ease;
+  z-index: 999;
+}
+
+.sidebar.open {
+  left: 0;
+}
+
+.sidebar::-webkit-scrollbar {
+  display: none;
+}
+
+.sidebar {
+  -ms-overflow-style: none; 
+  scrollbar-width: none;
+}
+
+.dam-box {
+  border: 6px solid rgb(0, 140, 255);
+  padding: 10px;
+  margin-bottom: 10px;
+  background-color: #9198a3;
+  color: black;
+  width: 100%; 
+  box-sizing: border-box;  
+  height: auto; 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;  
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.dam-box:hover {
+  background-color: #f0f0f0;  
+  border-color: #007bff;}
+
+.dam-box h3 {
+  margin: 0;  
+  font-size: 18px;
+  text-align: center;  
+}
+
+.dam-info {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #333;  
+  text-align: center;  
+}
+
+.dam-info p {
+  margin: 5px 0;  
+  font-size: 14px;
+} */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: -25%;
+  width: 15%;
+  height: 100%;
+  margin-top: 3%;
+  background-color: #444;
+  color: white;
+  padding: 2rem;
+  transition: left 0.3s ease;
+  z-index: 999;
+}
+
+.sidebar.open {
+  left: 0;
+}
+
+.sidebar::-webkit-scrollbar {
+  display: none;
+}
+
+.sidebar {
+  -ms-overflow-style: none; 
+  scrollbar-width: none;
+}
+
+.dam-box {
+  border: 6px solid rgb(0, 140, 255);
+  padding: 10px;
+  margin-bottom: 10px;
+  background-color: #9198a3;
+  color: black;
+  width: 100%; 
+  box-sizing: border-box;  
+  height: auto; 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;  
+  cursor: pointer; 
+}
+
+.dam-box.selected {
+  background-color: #fff; 
+}
+
+.dam-box h3 {
+  margin: 0;  
+  font-size: 18px;
+  text-align: center;  
+}
+
+.dam-info {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #333;  
+  text-align: center;  
+}
+
+.dam-info p {
+  margin: 5px 0;  
+  font-size: 14px;
+}

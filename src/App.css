@@ -1,0 +1,17 @@
+.App {
+  text-align: center;
+}
+
+.container {
+  display: flex;
+}
+
+main.content {
+  flex: 1;
+  transition: margin-left 0.3s ease;
+  overflow: hidden; 
+}
+
+main.content.shift {
+  margin-left: 25%; 
+}
