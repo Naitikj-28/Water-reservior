@@ -5,7 +5,7 @@ import 'chart.js/auto';
 import './CSS/ChartComponent.css'; // Import the CSS file
 import MapData from './Map';
 
-const ChartComponent = ({ selectedDate, selectedDam ,isSidebarOpen }) => {
+const ChartComponent = ({ selectedDate, selectedDam, isSidebarOpen }) => {
     const [chartData, setChartData] = useState({});
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
@@ -28,20 +28,20 @@ const ChartComponent = ({ selectedDate, selectedDam ,isSidebarOpen }) => {
                     const currentResLevel = [];
                     const dayWisePrediction = [];
 
-                    const selectedMonth = selectedDate.slice(0, 7); 
+                    const selectedMonth = selectedDate.slice(0, 7);
                     console.log('Selected month:', selectedMonth);
 
                     rows.slice(1).forEach(row => {
-                        const date = row[2]; 
-                        console.log('Date in row:', date); 
+                        const date = row[2];
+                        console.log('Date in row:', date);
 
                         const [day, month, year] = date.split('-');
                         const formattedDate = `${year}-${month}`;
 
                         if (date && formattedDate === selectedMonth) {
                             labels.push(date);
-                            currentResLevel.push(parseFloat(row[3]) || 0); 
-                            dayWisePrediction.push(parseFloat(row[28]) || 0); 
+                            currentResLevel.push(parseFloat(row[3]) || 0);
+                            dayWisePrediction.push(parseFloat(row[28]) || 0);
                         }
                     });
 
@@ -78,10 +78,10 @@ const ChartComponent = ({ selectedDate, selectedDam ,isSidebarOpen }) => {
             }
         };
 
-        if (selectedDam) { 
+        if (selectedDam) {
             fetchData();
         }
-    }, [selectedDate, selectedDam]); 
+    }, [selectedDate, selectedDam]);
 
     if (loading) {
         return <div>Loading...</div>;
@@ -93,13 +93,30 @@ const ChartComponent = ({ selectedDate, selectedDam ,isSidebarOpen }) => {
 
     return (
         <div className={`chart-container ${isSidebarOpen ? 'sidebar-open' : 'sidebar-closed'}`}>
-        <div className="chart-wrapper">
-            <Line data={chartData} className="chart" />
+            <div className="chart-wrapper">
+                <Line
+                    data={chartData}
+                    options={{
+                        scales: {
+                            x: {
+                                grid: {
+                                    display: false, // Hide vertical lines
+                                },
+                            },
+                            y: {
+                                grid: {
+                                    display: true, // Show horizontal lines
+                                },
+                            },
+                        },
+                    }}
+                    className="chart"
+                />
+            </div>
+            <div className="map-container">
+                <MapData selectedDam={selectedDam} />
+            </div>
         </div>
-        <div className="map-container">
-            <MapData selectedDam={selectedDam} />
-        </div>
-    </div>
     );
 };
 
