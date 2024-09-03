@@ -31,7 +31,7 @@ function MapData({ selectedDam }) {
     <div style={{ height: '100%', width: '100%' }}>
       <MapContainer
         center={selectedDamCoords || [12.4255, 76.5724]} 
-        zoom={10}
+        zoom={12}
         style={{ height: '100%', width: '100%' }}
       >
         <TileLayer

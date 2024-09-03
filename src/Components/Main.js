@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import './CSS/Main.css';
-// import Chart from './Chart';
 import ChartComponent from './Chart';
 
 function Main({ selectedDam, isSidebarOpen, selectedDate }) {
@@ -82,7 +81,6 @@ function Main({ selectedDam, isSidebarOpen, selectedDate }) {
   const riskLevelCurrent = data[25];
   const riskLevel15D = data[26];
   const riskLevel30D = data[27];
-  // const dayWisePrediction = data[28] || 0;
   const accuracy15D = data[29];
   const accuracy30D = data[30];
 
@@ -90,10 +88,7 @@ function Main({ selectedDam, isSidebarOpen, selectedDate }) {
     <div className={`main-container ${isSidebarOpen ? 'with-sidebar' : ''}`} style={{ padding: '20px' }}>
       <div style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
         <div style={{ width: '100%' }}>
-          <h2 style={{ marginBottom: '7px', textAlign: 'center' }}>{selectedDam}</h2>
-          <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', marginBottom: '20px' }}>
-            <strong>Storage:</strong> {storage ? parseFloat(storage).toFixed(1) : 'N/A'} (Volume in TMC)
-          </div>
+          <h2 style={{ marginBottom: '20px', fontSize: '1.8rem', textAlign: 'center' }}>{selectedDam}</h2>
           <div style={{ display: 'flex', justifyContent: 'space-between', textAlign: 'center' }}>
             <div style={{ backgroundColor: '#ede1e1', border: '5px solid #4287f5', flex: '1', padding: '10px', borderRadius: '10px', marginRight: '10px' }}>
               <h3>Cumulative Annual Rainfall in Catchment</h3>
@@ -168,7 +163,7 @@ function Main({ selectedDam, isSidebarOpen, selectedDate }) {
           </div>
         </div>
       </div>
-      <ChartComponent selectedDate={selectedDate} selectedDam={selectedDam} isSidebarOpen={isSidebarOpen}/>
+      <ChartComponent selectedDate={selectedDate} selectedDam={selectedDam} isSidebarOpen={isSidebarOpen} />
     </div>
   );
 }

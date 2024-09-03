@@ -21,6 +21,7 @@ function App() {
   };
 
   return (
+    <>
     <div className="App">
       <Navbar toggleSidebar={toggleSidebar} onDateChange={handleDateChange} />
       <div className="container">
@@ -38,6 +39,7 @@ function App() {
         </main>
       </div>
     </div>
+   </>
   );
 }
 

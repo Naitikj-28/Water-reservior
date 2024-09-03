@@ -1,7 +1,6 @@
 .main-container {
   transition: margin-left 0.3s ease;
-  margin-top: 3%;
-  scrollbar-width: none;
+  margin-top: 2%;
 }
 
 .main-container.with-sidebar {

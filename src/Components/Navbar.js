@@ -17,7 +17,7 @@ function Navbar({ toggleSidebar, onDateChange }) {
       <button onClick={toggleSidebar} className="sidebar-toggle">
         <FontAwesomeIcon icon={faBars} className="icon" />
       </button>
-      <p className="name"><b>AccionLAND</b> presents Water-Reservior-Watch </p>
+      <p className="name">Water-Reservior-Watch </p>
       <div className="datepicker-container">
         <input
           type="date"

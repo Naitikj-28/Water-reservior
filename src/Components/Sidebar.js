@@ -49,6 +49,12 @@ function Sidebar({ isOpen, onDamClick, selectedDam }) {
     // eslint-disable-next-line
   }, [apiKey, sheetId]);
 
+  useEffect(() => {
+    if (!selectedDam) {
+      onDamClick('Krishna Raja Sagara Dam');
+    }
+  }, [onDamClick, selectedDam]);
+
   return (
     <aside className={isOpen ? 'sidebar open' : 'sidebar'}>
       <div className="scroll-container">
