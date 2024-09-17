@@ -9,7 +9,7 @@ function Navbar({ toggleSidebar, onDateChange }) {
   const handleDateChange = (event) => {
     const newDate = event.target.value;
     setSelectedDate(newDate);
-    onDateChange(newDate); // Pass the selected date up to the parent component
+    onDateChange(newDate); 
   };
 
   return (
@@ -23,7 +23,7 @@ function Navbar({ toggleSidebar, onDateChange }) {
           type="date"
           className="datepicker-input"
           value={selectedDate}
-          onChange={handleDateChange} // Handle date changes
+          onChange={handleDateChange} 
         />
       </div>
     </nav>
