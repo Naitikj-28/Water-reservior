@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import './CSS/Sidebar.css';
+import logo from './CSS/logo-image.png';
 
 function Sidebar({ isOpen, onDamClick, selectedDam }) {
   const damNames = ['Krishna Raja Sagara Dam', 'Hemavathi Dam', 'Kabini Dam', 'Harangi Dam'];
@@ -59,9 +60,9 @@ function Sidebar({ isOpen, onDamClick, selectedDam }) {
     <aside className={isOpen ? 'sidebar open' : 'sidebar'}>
       <div className="scroll-container">
         {damNames.map((name, index) => (
-          <div 
-            key={index} 
-            className={`dam-box ${selectedDam === name ? 'selected' : ''}`} 
+          <div
+            key={index}
+            className={`dam-box ${selectedDam === name ? 'selected' : ''}`}
             onClick={() => onDamClick(name)}
           >
             <h3>{name}</h3>
@@ -73,6 +74,13 @@ function Sidebar({ isOpen, onDamClick, selectedDam }) {
             )}
           </div>
         ))}
+      </div>
+      <div className='footer'>
+        <img src={logo} alt='Company logo' />
+        <div className='finner'>
+        <h6>AccionLAND Pvt Ltd</h6>
+        <p>Contact us : 9909741013</p>
+        </div>
       </div>
     </aside>
   );

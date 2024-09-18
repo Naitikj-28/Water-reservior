@@ -9,7 +9,9 @@
   color: white;
   padding: 2rem;
   transition: left 0.3s ease;
-  z-index: 999;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .sidebar.open {
@@ -21,7 +23,7 @@
 }
 
 .sidebar {
-  -ms-overflow-style: none; 
+  -ms-overflow-style: none;
   scrollbar-width: none;
 }
 
@@ -31,35 +33,73 @@
   margin-bottom: 10px;
   background-color: #9198a3;
   color: black;
-  width: 100%; 
-  box-sizing: border-box;  
-  height: auto; 
+  width: 100%;
+  box-sizing: border-box;
+  height: auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border-radius: 8px;  
-  cursor: pointer; 
+  border-radius: 8px;
+  cursor: pointer;
 }
 
 .dam-box.selected {
-  background-color: #fff; 
+  background-color: #fff;
 }
 
 .dam-box h3 {
-  margin: 0;  
+  margin: 0;
   font-size: 18px;
-  text-align: center;  
+  text-align: center;
 }
 
 .dam-info {
   margin-top: 10px;
   font-size: 14px;
-  color: #333;  
-  text-align: center;  
+  color: #333;
+  text-align: center;
 }
 
 .dam-info p {
-  margin: 5px 0;  
+  margin: 5px 0;
   font-size: 14px;
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 0.6rem;
+  background-color: white;
+  position: relative;
+  margin-bottom: 25%;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+.footer img {
+  width: 60px;
+  height: auto;
+  margin-right: 8px;
+}
+
+.footer .finner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.footer h6 {
+  margin: 0;
+  font-size: 18px;
+  color: black;
+  text-align: center; 
+}
+
+.footer p {
+  margin: 0;
+  font-size: 13px;
+  color: black;
+  text-align: center;
 }

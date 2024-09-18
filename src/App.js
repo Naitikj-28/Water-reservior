@@ -3,6 +3,7 @@ import Navbar from './Components/Navbar';
 import Sidebar from './Components/Sidebar';
 import Main from './Components/Main';
 import Spinner from './Components/Spinner';
+import './App.css';
 
 function App() {
   const [selectedDam, setSelectedDam] = useState(null);
