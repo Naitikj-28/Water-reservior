@@ -68,8 +68,8 @@ function Sidebar({ isOpen, onDamClick, selectedDam }) {
             <h3>{name}</h3>
             {damData[name] && (
               <div className="dam-info">
-                <p>Full Capacity: {damData[name].maxStorage}</p>
-                <p>Max Level: {damData[name].maxResLevel}</p>
+                <p>Full Capacity: {damData[name].maxStorage}"Volume in TMC"</p>
+                <p>Max Level: {damData[name].maxResLevel}"Height in ft"</p>
               </div>
             )}
           </div>
@@ -78,8 +78,8 @@ function Sidebar({ isOpen, onDamClick, selectedDam }) {
       <div className='footer'>
         <img src={logo} alt='Company logo' />
         <div className='finner'>
-        <h6>AccionLAND Pvt Ltd</h6>
-        <p>Contact us : 9909741013</p>
+          <h6>AccionLAND Pvt Ltd</h6>
+          <p>Contact us : 9909741013</p>
         </div>
       </div>
     </aside>
