@@ -47,7 +47,6 @@ function Sidebar({ isOpen, onDamClick, selectedDam }) {
     };
 
     fetchData();
-    // eslint-disable-next-line
   }, [apiKey, sheetId]);
 
   useEffect(() => {
@@ -55,6 +54,10 @@ function Sidebar({ isOpen, onDamClick, selectedDam }) {
       onDamClick('Krishna Raja Sagara Dam');
     }
   }, [onDamClick, selectedDam]);
+
+  const handleFooterClick = () => {
+    window.open("https://accionland.com/", "_blank");
+  };
 
   return (
     <aside className={isOpen ? 'sidebar open' : 'sidebar'}>
@@ -75,7 +78,7 @@ function Sidebar({ isOpen, onDamClick, selectedDam }) {
           </div>
         ))}
       </div>
-      <div className='footer'>
+      <div className='footer' onClick={handleFooterClick} style={{ cursor: 'pointer' }}>
         <img src={logo} alt='Company logo' />
         <div className='finner'>
           <h6>AccionLAND Pvt Ltd</h6>
